@@ -1,2 +1,2 @@
 # tubes-praktikum-pemrograman
-Tugas besar Praktikum Pemrograman 1, kelompok 4
+Repo ini merupakan bagian dari tugas besar Praktikum Pemrograman 1 S1SE-06-B 14 Juni 2023
