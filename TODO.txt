@@ -1,0 +1,6 @@
+Tugas pengerjaan, 19 Juni 2023:
+1. Tambahkan fitur pencarian nama kota di Jawa Tengah (Dava)
+2. Tambahkan fitur pengurutan nama kota (untuk tujuan pencarian) (Ancha)
+3. Tambahkan fitur sanitasi I/O dari pengguna (Ralfi)
+4. Buatkan koleksi data nama-nama kota di Jawa Tengah (Candra)
+5. Buatkan tampilan CLI program (Ade)
