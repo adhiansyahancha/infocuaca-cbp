@@ -1,0 +1,4 @@
+Kelembapan
+Suhu
+Kecepatan angin
+Arah angin
