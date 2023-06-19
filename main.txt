@@ -1,9 +1,2 @@
- ,                   .                    
--+- _ ._.._ _ *._  _.| ___  _.. . _. _. _.
- | (/,[  [ | )|[ )(_]|     (_.(_|(_](_.(_]
-                                          
-Terminal Prakiraan Cuaca di Jawa Tengah
-Silahkan Masukkan Pilihan
-
-1. Cari Kota
-2. Tentang Para Pengembang
+cari        Cari Kota
+tentang     Tentang Para Pengembang
