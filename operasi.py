@@ -20,7 +20,6 @@ def validasi_input(input_str):
     return input_str
 
 
-
 def urutkan_kota(array):
     for z in range(len(array)):
         for x in range(len(array) - 1):
@@ -29,3 +28,10 @@ def urutkan_kota(array):
 
     return array
 
+def daftar_kota():
+    data = []
+    
+    for kota in range(36):
+        data.append(ep[kota]['@description'])
+
+    return data
