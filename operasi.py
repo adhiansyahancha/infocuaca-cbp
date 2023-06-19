@@ -2,7 +2,7 @@ import re
 """
 Berkas ini berisi operasi-operasi untuk pengolahan prakiraan cuaca
 """
-def validate_input(input_str):
+def validasi_input(input_str):
     # Contoh inputan
     # user_input = input("Masukkan input: ")
 
