@@ -35,3 +35,18 @@ def daftar_kota(data_api):
         data.append(data_api[kota]['@description'])
 
     return data
+
+def cari_kota(data_kota):
+    # Dengan syarat bahwa data telah terurut
+    batas_awal = 0
+    batas_akhir = len(data_kota)
+    while batas_awal <= batas_akhir:
+        mid_index = (batas_awal + batas_akhir) // 2
+        if data_kota[mid_index] < keyword:
+            batas_awal = mid_index + 1
+        elif data_kota[mid_index] > keyword:
+            batas_akhir = mid_index -1
+        else:
+            return mid_index
+    
+    return 0
