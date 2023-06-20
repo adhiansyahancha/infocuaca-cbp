@@ -5,7 +5,7 @@ Tugas pengerjaan, 19 Juni 2023:
 4. Buatkan koleksi data nama-nama kota di Jawa Tengah (Candra)              OK
 5. Buatkan tampilan CLI program (Ade)                                       OK
 
-Tugas pengerjaan, 21 Juni 2023:
+Tugas pengerjaan, 21 Juni 2023 (menyesuaikan):
 1. Reorganisasi dan perapian kode sumber beserta berkas tubes (Ancha)
 2. Modifikasi sanitasi I/O program utama tanpa melempar error (Ralfi)
 3. Kembangkan tampilan CLI (Ade)
