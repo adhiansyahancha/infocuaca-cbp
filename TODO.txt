@@ -6,7 +6,11 @@ Tugas pengerjaan, 19 Juni 2023:
 5. Buatkan tampilan CLI program (Ade)                                       OK
 
 Tugas pengerjaan, 21 Juni 2023 (menyesuaikan):
-1. Reorganisasi dan perapian kode sumber beserta berkas tubes (Ancha)
-2. Modifikasi sanitasi I/O program utama tanpa melempar error (Ralfi)
-3. Kembangkan tampilan CLI (Ade)
-4. Buat fitur tampilan karakteristik cuaca (Candra dan Dava)
+1. Reorganisasi dan perapian kode sumber beserta berkas tubes (Ancha)       OK
+2. Modifikasi sanitasi I/O program utama tanpa melempar error (Ralfi)       OK
+3. Kembangkan tampilan CLI (Ade)                                            OK
+4. Buat fitur tampilan karakteristik cuaca (Candra dan Dava)                Masih pengembangan
+
+Tugas pengerjaan, 22 Juni 2023:
+1. Uraikan perintah dari pengguna (Ancha)
+2. Buat fitor tampilan karakteristik cuaca (bersama-sama)
