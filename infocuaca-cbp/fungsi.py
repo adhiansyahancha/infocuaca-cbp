@@ -31,6 +31,9 @@ def daftar_kota(data_api) -> list:
 
     return data
 
+def segarkan_konsol():
+    return os.system('cls||clear')
+
 # Urutkan kota yang diambil dari daftar_kota
 def urutkan_kota(koleksi) -> list:
     for z in range(len(koleksi)):

@@ -1,7 +1,5 @@
 Selamat datang di infocuaca-cbp!
 
-Konsol ini menyajikan data prakiraan cuaca di
-kota-kota Jawa Tengah. Dukungan untuk seluruh 
-Indonesia dalam pengembangan.
+Konsol ini menyajikan data prakiraan cuaca di kota-kota Jawa Tengah.
+Dukungan untuk seluruh Indonesia masih dalam pengembangan.
 
-Perintah yang tersedia:
