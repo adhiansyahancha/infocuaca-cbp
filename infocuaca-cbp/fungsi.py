@@ -23,35 +23,22 @@ def cari_kota(data_kota, kueri) -> str:
     return 0
 
 # Tampilkan daftar kota-kota Jawa Tengah
-def daftar_kota(json_api) -> list:
+def daftar_kota(data_api) -> list:
     data = []
     
     for kota in range(36):
-        data.append(json_api['row']['data']['forecast']['area'][kota]['@description'])
+        data.append(data_api[kota]['@description'])
 
     return data
 
-# Segarkan tampilan
 def segarkan_konsol():
     return os.system('cls||clear')
-
-# Uraikan input pengguna
-def uraikan_perintah(arg, json_api=None):
-    match arg:
-        case 'daftar-kota': 
-            print(urutkan_kota(daftar_kota(json_api)))
-        case 'keluar' | 'exit' | 'quit':
-            exit(1)
-        case '':
-            pass
-        case _:
-            print("Perintah tidak valid")
 
 # Urutkan kota yang diambil dari daftar_kota
 def urutkan_kota(koleksi) -> list:
     for z in range(len(koleksi)):
         for x in range(len(koleksi) - 1):
-            if koleksi[x] > koleksi[x + 1]:
+            if koleksi[x] < koleksi[x + 1]:
                 koleksi[x], koleksi[x + 1] = koleksi[x + 1], koleksi[x]
 
     return koleksi
@@ -60,7 +47,30 @@ def urutkan_kota(koleksi) -> list:
 def validasi_input(masukan) -> str:
     masukan = masukan.strip()
     pattern = r"^[a-zA-Z]+$"
-    if not re.match(pattern, masukan):
-        raise ValueError("Input hanya boleh berisi huruf alfabet")
-
     return masukan
+
+def get_weather(city):      # nanti ganti dengan API yang sesungguhnya
+    data_kota = {
+        "jakarta": "Cerah",
+        "bandung": "Berawan",
+        "purwokerto": "Hujan sedang",
+        "brebes": "Berawan",
+        "pekalongan": "Cerah"
+    }
+
+    if city in data_kota:
+        return data_kota[city]
+    else:
+        raise ValueError("Kota tidak ditemukan")
+
+while True:
+    try:
+        city_input = input("Masukkan nama kota: ")
+        city_input = city_input.lower()
+        validated_input = validate_input(city_input)
+        weather = get_weather(validated_input)
+        print("Informasi cuaca untuk", validated_input + ":", weather)
+        break
+
+    except ValueError as e:
+        print("Error:", e)
