@@ -9,7 +9,7 @@ Terima kasih spesial untuk pustaka Request (request.readthedocs.io)
 
 PARA PENGEMBANG
 Ketua Project Tubes
-Nama   : Adhiansyah Ancha Farawowan
+Nama   : Adhiansyah Muhammad Pradana Farawowan
 NIM    : 2211104038
 Github : https://github.com/adhiansyahancha
 
