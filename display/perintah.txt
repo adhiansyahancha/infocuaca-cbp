@@ -1,0 +1,3 @@
+    cari [NAMA_KOTA]        : Cari Kota
+    daftar-kota             : Tampilkan daftar kota-kota Jawa Tengah
+    tentang                 : Tentang Para Pengembang

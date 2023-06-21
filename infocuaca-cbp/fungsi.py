@@ -1,43 +1,14 @@
+import os
 import re
-"""
-Berkas ini berisi operasi-operasi untuk pengolahan prakiraan cuaca
-"""
 
-def validasi_input(input_str):
-    # Contoh inputan
-    # user_input = input("Masukkan input: ")
+# Baca fail dari direktori 'display'
+def baca_fail(fail) -> None:
+    DIR_FAIL = os.path.join(os.path.dirname(__file__).replace('infocuaca-cbp', '') + 'display', f'{fail}')
+    with open(DIR_FAIL, encoding='utf-8') as _fail:
+        return _fail.read()
 
-    # try:
-    #     validated_input = validate_input(user_input)
-    #     print("Kota yang dimasukkan:", validated_input)
-    # except ValueError as e:
-    #     print("Error:", e)
-    
-    input_str = input_str.strip()
-    pattern = r"^[a-zA-Z]+$"
-    if not re.match(pattern, input_str):
-        raise ValueError("Input hanya boleh berisi huruf alfabet")
-
-    return input_str
-
-def urutkan_kota(array):
-    for z in range(len(array)):
-        for x in range(len(array) - 1):
-            if array[x] < array[x + 1]:
-                array[x], array[x + 1] = array[x + 1], array[x]
-
-    return array
-
-def daftar_kota(data_api):
-    data = []
-    
-    for kota in range(36):
-        data.append(data_api[kota]['@description'])
-
-    return data
-
-def cari_kota(data_kota, kueri):
-    # Dengan syarat bahwa data telah terurut
+# Cari kota di data yang sudah disiapkan daftar_kota
+def cari_kota(data_kota, kueri) -> str:
     batas_awal = 0
     batas_akhir = len(data_kota)
     while batas_awal <= batas_akhir:
@@ -50,3 +21,30 @@ def cari_kota(data_kota, kueri):
             return mid_index
     
     return 0
+
+# Tampilkan daftar kota-kota Jawa Tengah
+def daftar_kota(data_api) -> list:
+    data = []
+    
+    for kota in range(36):
+        data.append(data_api[kota]['@description'])
+
+    return data
+
+# Urutkan kota yang diambil dari daftar_kota
+def urutkan_kota(koleksi) -> list:
+    for z in range(len(koleksi)):
+        for x in range(len(koleksi) - 1):
+            if koleksi[x] < koleksi[x + 1]:
+                koleksi[x], koleksi[x + 1] = koleksi[x + 1], koleksi[x]
+
+    return koleksi
+
+# Validasikan input agar sesuai ketentuan
+def validasi_input(masukan) -> str:
+    masukan = masukan.strip()
+    pattern = r"^[a-zA-Z]+$"
+    if not re.match(pattern, masukan):
+        raise ValueError("Input hanya boleh berisi huruf alfabet")
+
+    return masukan

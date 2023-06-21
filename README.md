@@ -1,4 +1,4 @@
-# terminal-cuaca
+# infocuaca-cbp
 Ini adalah aplikasi CLI untuk menampilkan data cuaca sebagai tugas besar kelompok 4 Praktikum Pemrograman 1 Semester 2
 
 Anggota kelompok:
