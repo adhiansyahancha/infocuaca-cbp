@@ -12,5 +12,10 @@ Tugas pengerjaan, 21 Juni 2023 (menyesuaikan):
 4. Buat fitur tampilan karakteristik cuaca (Candra dan Dava)                Masih pengembangan
 
 Tugas pengerjaan, 22 Juni 2023:
-1. Uraikan perintah dari pengguna (Ancha)
-2. Buat fitor tampilan karakteristik cuaca (bersama-sama)
+1. Uraikan perintah dari pengguna (Ancha)                                   Belum selesai
+2. Buat fitor tampilan karakteristik cuaca (bersama-sama)                   Masih pengembangan
+
+Tugas pengerjaan, 25 Juni 2023 (menyesuaikan):
+1. Buat fitor tampilan karakteristik cuaca (bersama-sama)
+2. Buat fitur output terpisah dari perintah (Ade)
+3. Buat fitur perintah "tampilkan" (Ancha, Ralfi)
