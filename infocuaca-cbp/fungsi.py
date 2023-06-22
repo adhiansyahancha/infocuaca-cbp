@@ -26,27 +26,14 @@ def cari_kota(data_kota, kueri) -> str:
 def daftar_kota(api_cuaca) -> list:
     data = []
     
-    for kota in range(36):
+    for kota in range(len(api_cuaca)):
         data.append(api_cuaca[kota]['@description'])
 
     return data
 
 # Segarkan konsol
-def segarkan_konsol():
+def segarkan_konsol() -> int:
     return os.system('cls||clear')
-
-# Uraikan perintah pengguna
-def urai_perintah(arg):
-    if arg in ('keluar', 'exit', 'quit'):
-        exit(0)
-    elif arg == 'tentang':
-        segarkan_konsol()
-        print(
-            baca_fail('kepala.txt') +
-            baca_fail('tentang.txt')
-        )
-        input()
-    
 
 # Urutkan kota yang diambil dari daftar_kota
 def urutkan_kota(koleksi) -> list:
