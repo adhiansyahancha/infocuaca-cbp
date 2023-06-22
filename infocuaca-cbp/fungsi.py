@@ -8,7 +8,7 @@ def baca_fail(fail) -> None:
         return _fail.read()
 
 # Cari kota di data yang sudah disiapkan daftar_kota
-def cari_kota(data_kota, kueri) -> str:
+def cari_kota(data_kota, kueri) -> int:
     batas_awal = 0
     batas_akhir = len(data_kota)
     while batas_awal <= batas_akhir:
@@ -37,9 +37,9 @@ def segarkan_konsol() -> int:
 
 # Urutkan kota yang diambil dari daftar_kota
 def urutkan_kota(koleksi) -> list:
-    for z in range(len(koleksi)):
+    for _ in range(len(koleksi)):
         for x in range(len(koleksi) - 1):
-            if koleksi[x] < koleksi[x + 1]:
+            if koleksi[x] > koleksi[x + 1]:
                 koleksi[x], koleksi[x + 1] = koleksi[x + 1], koleksi[x]
 
     return koleksi
