@@ -23,16 +23,30 @@ def cari_kota(data_kota, kueri) -> str:
     return 0
 
 # Tampilkan daftar kota-kota Jawa Tengah
-def daftar_kota(data_api) -> list:
+def daftar_kota(api_cuaca) -> list:
     data = []
     
     for kota in range(36):
-        data.append(data_api[kota]['@description'])
+        data.append(api_cuaca[kota]['@description'])
 
     return data
 
+# Segarkan konsol
 def segarkan_konsol():
     return os.system('cls||clear')
+
+# Uraikan perintah pengguna
+def urai_perintah(arg):
+    if arg in ('keluar', 'exit', 'quit'):
+        exit(0)
+    elif arg == 'tentang':
+        segarkan_konsol()
+        print(
+            baca_fail('kepala.txt') +
+            baca_fail('tentang.txt')
+        )
+        input()
+    
 
 # Urutkan kota yang diambil dari daftar_kota
 def urutkan_kota(koleksi) -> list:
@@ -49,7 +63,8 @@ def validasi_input(masukan) -> str:
     pattern = r"^[a-zA-Z]+$"
     return masukan
 
-def get_weather(city):      # nanti ganti dengan API yang sesungguhnya
+def tes_dapatkan_cuaca(city):      
+    # nanti ganti dengan API yang sesungguhnya
     data_kota = {
         "jakarta": "Cerah",
         "bandung": "Berawan",
@@ -63,14 +78,14 @@ def get_weather(city):      # nanti ganti dengan API yang sesungguhnya
     else:
         raise ValueError("Kota tidak ditemukan")
 
-while True:
-    try:
-        city_input = input("Masukkan nama kota: ")
-        city_input = city_input.lower()
-        validated_input = validate_input(city_input)
-        weather = get_weather(validated_input)
-        print("Informasi cuaca untuk", validated_input + ":", weather)
-        break
+    while True:
+        try:
+            city_input = input("Masukkan nama kota: ")
+            city_input = city_input.lower()
+            validated_input = validate_input(city_input)
+            weather = get_weather(validated_input)
+            print("Informasi cuaca untuk", validated_input + ":", weather)
+            break
 
-    except ValueError as e:
-        print("Error:", e)
+        except ValueError as e:
+            print("Error:", e)

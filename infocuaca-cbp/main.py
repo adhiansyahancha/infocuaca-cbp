@@ -1,5 +1,5 @@
 import requests
-from fungsi import baca_fail, segarkan_konsol, uraikan_perintah
+from fungsi import baca_fail, segarkan_konsol, urai_perintah
 
 segarkan_konsol()
 print(baca_fail('kepala.txt') + "Memuat...")
@@ -21,6 +21,6 @@ def main():
 if __name__ == '__main__':
     main()
     while True:
-        mp = input('infocuaca-cbp> ')
-        uraikan_perintah(mp, json_api=json_bmkg)
+        argumen_pengguna = input('infocuaca-cbp> ')
+        urai_perintah(argumen_pengguna)
         
