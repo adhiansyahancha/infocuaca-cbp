@@ -3,7 +3,7 @@ from fungsi import baca_fail, segarkan_konsol, cari_kota, daftar_kota, urutkan_k
 from tentang import tentang
 
 # Inti eksekusi
-def program_inti(data_area_cuaca):
+def kode_inti(data_area_cuaca):
     segarkan_konsol()
 
     print(baca_fail('kepala.txt') + baca_fail('intro.txt') + baca_fail('perintah.txt'))
@@ -17,9 +17,9 @@ def respon_json_cuaca():
     return requests.get("https://cuaca.umkt.ac.id/api/cuaca/DigitalForecast-JawaTengah.xml?format=json").json()
 
 # Uraikan perintah pengguna
-def urai_perintah(masukan, apidata):
+def urai_perintah(masukan, data_area_cuaca):
     # Penanganan argumen pencarian
-    if masukan[:4] == 'cari':
+    if 'cari' in masukan:
         masukan = masukan.split(' ')
         kueri = masukan[1].title()
         try:
@@ -28,7 +28,7 @@ def urai_perintah(masukan, apidata):
         except IndexError:
             pass
 
-        data_kota = urutkan_kota(daftar_kota(apidata))
+        data_kota = urutkan_kota(daftar_kota(data_area_cuaca))
         hasil_pencarian = cari_kota(data_kota=data_kota, kueri=kueri)
 
         if kueri in ('', ' '):
@@ -36,23 +36,23 @@ def urai_perintah(masukan, apidata):
         elif hasil_pencarian != 0:
             print(f"Ditemukan \"{data_kota[hasil_pencarian]}\" di basis data\n")
         else:
-            print("Tidak ditemukan hasil pencarian\n")
+            print(f"Tidak ditemukan hasil pencarian untuk \"{kueri.lower()}\"\n")
     
     # Pola pencocokan untuk masukan tanpa argumen
     else:
         match masukan:
             case 'daftar-kota':
-                print(urutkan_kota(daftar_kota(apidata)), '\n')
+                print(daftar_kota(data_area_cuaca), '\n')
             case 'tentang':
                 tentang()
-                program_inti(apidata)
+                kode_inti(data_area_cuaca)
             case 'keluar' | 'exit' | 'quit':
                 print("Keluar")
                 exit(0)
             case '':
                 pass
             case _:
-                print("Perintah tidak valid")
+                print(f"Perintah \"{masukan}\" tidak dapat dikenali\n")
 
 if __name__ == '__main__':
     segarkan_konsol()
@@ -66,6 +66,6 @@ if __name__ == '__main__':
     else:
         pass
 
-    program_inti(data_area_cuaca=data_area_cuaca)
+    kode_inti(data_area_cuaca=data_area_cuaca)
 
         
