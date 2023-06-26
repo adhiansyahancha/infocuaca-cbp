@@ -44,5 +44,31 @@ def data_persiapan(kode):
         "wd": '112'
     }
 
+def data_persiapa1(kode):
+    return {
+        "cty": data[kode]["@description"],
+        "prv": data[kode]["@domain"],
+        "ltg": data[kode]["@latitude"],
+        "bjr": data[kode]["@longitude"],
+        "dt": time.strftime('%d %B %Y'),
+        "h0": data[kode]["parameter"][0]["timerange"][0]["value"]["#text"],
+        "h1": data[kode]["parameter"][0]["timerange"][1]["value"]["#text"],
+        "h2": data[kode]["parameter"][0]["timerange"][2]["value"]["#text"],
+        "h3": data[kode]["parameter"][0]["timerange"][3]["value"]["#text"],
+        "hx": data[kode]["parameter"][1]["timerange"][0]["value"]["#text"],
+        "hm": data[kode]["parameter"][3]["timerange"][0]["value"]["#text"],
+        "t0": data[kode]["parameter"][5]["timerange"][0]["value"]["#text"],
+        "t1": data[kode]["parameter"][5]["timerange"][1]["value"]["#text"],
+        "t2": data[kode]["parameter"][5]["timerange"][2]["value"]["#text"],
+        "t3": data[kode]["parameter"][5]["timerange"][3]["value"]["#text"],
+        "tx": data[kode]["parameter"][2]["timerange"][0]["value"][0]["#text"],
+        "tm": data[kode]["parameter"][4]["timerange"][0]["value"][0]["#text"],
+        "w0": data[kode]
+        "w1": data[kode]
+        "w2": data[kode]
+        "w3": data[kode]
+        "wk": data[kode]
+        "wd": data[kode]
+    }
 
 print(baca_fail("hasil.txt").format(**data_persiapan(0)))
