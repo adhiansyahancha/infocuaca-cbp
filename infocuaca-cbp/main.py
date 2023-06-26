@@ -31,17 +31,11 @@ def respon_data_cuaca():
 # Uraikan perintah pengguna
 def urai_perintah(masukan, respon_api):
     # Penanganan argumen pencarian
-<<<<<<< HEAD
     if 'cari' in masukan:
         masukan = masukan.split(' ')
-        pola = r'[^\w\s]' 
+        pola = r'[^\w\s]'
         hasil = re.sub(pola, '', masukan[1])
         print(hasil)
-=======
-    if "cari" in masukan:
-        # Untuk sementara
-        pass
->>>>>>> 8f0df24ab065f0e1cda5ad3a7e2bb8c2da23e037
     # Pola pencocokan untuk masukan tanpa argumen
     else:
         match masukan:

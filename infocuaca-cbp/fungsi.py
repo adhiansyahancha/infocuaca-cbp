@@ -1,11 +1,14 @@
 import os
-import re
+
 
 # Baca fail dari direktori 'display'
 def baca_fail(fail) -> None:
-    DIR_FAIL = os.path.join(os.path.dirname(__file__).replace('infocuaca-cbp', '') + 'display', f'{fail}')
-    with open(DIR_FAIL, encoding='utf-8') as _fail:
+    DIR_FAIL = os.path.join(
+        os.path.dirname(__file__).replace("infocuaca-cbp", "") + "display", f"{fail}"
+    )
+    with open(DIR_FAIL, encoding="utf-8") as _fail:
         return _fail.read()
+
 
 # Cari kota di data yang sudah disiapkan daftar_kota
 def cari_kota(data_kota, kueri) -> int:
@@ -16,24 +19,27 @@ def cari_kota(data_kota, kueri) -> int:
         if data_kota[mid_index] < kueri:
             batas_awal = mid_index + 1
         elif data_kota[mid_index] > kueri:
-            batas_akhir = mid_index -1
+            batas_akhir = mid_index - 1
         else:
             return mid_index
-    
+
     return 0
+
 
 # Tampilkan daftar kota-kota Jawa Tengah
 def daftar_kota(api_cuaca) -> list:
     data = []
-    
+
     for kota in range(len(api_cuaca)):
-        data.append(api_cuaca[kota]['@description'])
+        data.append(api_cuaca[kota]["@description"])
 
     return data
 
+
 # Segarkan konsol
 def segarkan_konsol() -> int:
-    return os.system('cls||clear')
+    return os.system("cls||clear")
+
 
 # Urutkan kota yang diambil dari daftar_kota
 def urutkan_kota(koleksi) -> list:
