@@ -34,8 +34,12 @@ def urai_perintah(masukan, respon_api):
     if 'cari' in masukan:
         masukan = masukan.split(' ')
         pola = r'[^\w\s]'
-        hasil = re.sub(pola, '', masukan[1])
-        print(hasil)
+        hasil = re.sub(pola, '', masukan[1]).title()
+        kota_kota = daftar_kota(respon_api)
+        if hasil in kota_kota:
+            print("hasil ditemukan: ", hasil)
+        else:
+            print("tidak ditemukan")
     # Pola pencocokan untuk masukan tanpa argumen
     else:
         match masukan:
@@ -63,5 +67,6 @@ if __name__ == "__main__":
         print(f"Gagal menghubungkan API. Berikut ini errornya:\n{err}")
 
     respon_json_cuaca = respon_data_cuaca().json()
+    area_cuaca = respon_json_cuaca["row"]["data"]["forecast"]["area"]
 
-    kode_inti(respon_api=respon_json_cuaca)
+    kode_inti(respon_api=area_cuaca)
