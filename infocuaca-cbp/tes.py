@@ -63,12 +63,12 @@ def data_persiapa1(kode):
         "t3": data[kode]["parameter"][5]["timerange"][3]["value"]["#text"],
         "tx": data[kode]["parameter"][2]["timerange"][0]["value"][0]["#text"],
         "tm": data[kode]["parameter"][4]["timerange"][0]["value"][0]["#text"],
-        "w0": data[kode]
-        "w1": data[kode]
-        "w2": data[kode]
-        "w3": data[kode]
-        "wk": data[kode]
-        "wd": data[kode]
+        "w0": data[kode]["parameter"][8]["timerange"][0]["value"][2]["#text"],
+        "w1": data[kode]["parameter"][8]["timerange"][1]["value"][2]["#text"],
+        "w2": data[kode]["parameter"][8]["timerange"][2]["value"][2]["#text"],
+        "w3": data[kode]["parameter"][8]["timerange"][3]["value"][2]["#text"],
+        "wk": data[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"],
+        "wd": data[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"],
     }
 
 print(baca_fail("hasil.txt").format(**data_persiapan(0)))
