@@ -1,3 +1,4 @@
+import re
 import requests
 from fungsi import baca_fail, segarkan_konsol, cari_kota, daftar_kota, urutkan_kota
 from tentang import tentang
@@ -21,23 +22,9 @@ def urai_perintah(masukan, data_area_cuaca):
     # Penanganan argumen pencarian
     if 'cari' in masukan:
         masukan = masukan.split(' ')
-        kueri = masukan[1].title()
-        try:
-            if masukan[2]:
-                kueri = (masukan[1] + ' ' + masukan[2]).title()
-        except IndexError:
-            pass
-
-        data_kota = urutkan_kota(daftar_kota(data_area_cuaca))
-        hasil_pencarian = cari_kota(data_kota=data_kota, kueri=kueri)
-
-        if kueri in ('', ' '):
-            print("Pencarian tidak valid\n")
-        elif hasil_pencarian != 0:
-            print(f"Ditemukan \"{data_kota[hasil_pencarian]}\" di basis data\n")
-        else:
-            print(f"Tidak ditemukan hasil pencarian untuk \"{kueri.lower()}\"\n")
-    
+        pola = r'[^\w\s]' 
+        hasil = re.sub(pola, '', masukan[1])
+        print(hasil)
     # Pola pencocokan untuk masukan tanpa argumen
     else:
         match masukan:
