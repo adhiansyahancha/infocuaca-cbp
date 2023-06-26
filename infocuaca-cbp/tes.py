@@ -5,16 +5,16 @@ from fungsi import baca_fail
 
 locale.setlocale(locale.LC_TIME, "id_ID")
 
-# data = requests.get(
-#     "https://cuaca.umkt.ac.id/api/cuaca/DigitalForecast-JawaTengah.xml?format=json"
-# ).json()["row"]["data"]["forecast"]["area"]
+data = requests.get(
+    "https://cuaca.umkt.ac.id/api/cuaca/DigitalForecast-JawaTengah.xml?format=json"
+).json()["row"]["data"]["forecast"]["area"]
 
-# konversi_kota_kode = {}
-# for kode in range(len(data)):
-#     konversi_kota_kode[f"{data[kode]['@description']}"] = kode
+konversi_kota_kode = {}
+for kode in range(len(data)):
+    konversi_kota_kode[f"{data[kode]['@description']}"] = kode
 
-# input_kota = input("Masukkan nama kota: ")
-# input_kota = input_kota.title().strip()
+input_kota = input("Masukkan nama kota: ")
+input_kota = input_kota.title().strip()
 
 
 def data_persiapan(kode):
@@ -67,8 +67,8 @@ def data_persiapa1(kode):
         "w1": data[kode]["parameter"][8]["timerange"][1]["value"][2]["#text"] + " km/j",
         "w2": data[kode]["parameter"][8]["timerange"][2]["value"][2]["#text"] + " km/j",
         "w3": data[kode]["parameter"][8]["timerange"][3]["value"][2]["#text"] + " km/j",
-        "wk": data[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"] + " km/j",
-        "wd": data[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"] + " km/j",
+        "wk": data[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"],
+        "wd": data[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"],
     }
 
-print(baca_fail("hasil.txt").format(**data_persiapan(0)))
+print(baca_fail("hasil.txt").format(**data_persiapa1(konversi_kota_kode[input_kota])))
