@@ -43,36 +43,3 @@ def urutkan_kota(koleksi) -> list:
                 koleksi[x], koleksi[x + 1] = koleksi[x + 1], koleksi[x]
 
     return koleksi
-
-# Validasikan input agar sesuai ketentuan
-def validasi_input(masukan) -> str:
-    masukan = masukan.strip()
-    pattern = r"^[a-zA-Z]+$"
-    return masukan
-
-def tes_dapatkan_cuaca(city):      
-    # nanti ganti dengan API yang sesungguhnya
-    data_kota = {
-        "jakarta": "Cerah",
-        "bandung": "Berawan",
-        "purwokerto": "Hujan sedang",
-        "brebes": "Berawan",
-        "pekalongan": "Cerah"
-    }
-
-    if city in data_kota:
-        return data_kota[city]
-    else:
-        raise ValueError("Kota tidak ditemukan")
-
-    while True:
-        try:
-            city_input = input("Masukkan nama kota: ")
-            city_input = city_input.lower()
-            validated_input = validate_input(city_input)
-            weather = get_weather(validated_input)
-            print("Informasi cuaca untuk", validated_input + ":", weather)
-            break
-
-        except ValueError as e:
-            print("Error:", e)
