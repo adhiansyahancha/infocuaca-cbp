@@ -63,12 +63,12 @@ def data_persiapa1(kode):
         "t3": data[kode]["parameter"][5]["timerange"][3]["value"][1]["#text"] + "°C",
         "tx": data[kode]["parameter"][2]["timerange"][0]["value"][0]["#text"] + "°C",
         "tm": data[kode]["parameter"][4]["timerange"][0]["value"][0]["#text"] + "°C",
-        "w0": data[kode]["parameter"][8]["timerange"][0]["value"][2]["#text"] + "km/j",
-        "w1": data[kode]["parameter"][8]["timerange"][1]["value"][2]["#text"] + "km/j",
-        "w2": data[kode]["parameter"][8]["timerange"][2]["value"][2]["#text"] + "km/j",
-        "w3": data[kode]["parameter"][8]["timerange"][3]["value"][2]["#text"] + "km/j",
-        "wk": data[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"] + "km/j",
-        "wd": data[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"] + "km/j",
+        "w0": data[kode]["parameter"][8]["timerange"][0]["value"][2]["#text"] + " km/j",
+        "w1": data[kode]["parameter"][8]["timerange"][1]["value"][2]["#text"] + " km/j",
+        "w2": data[kode]["parameter"][8]["timerange"][2]["value"][2]["#text"] + " km/j",
+        "w3": data[kode]["parameter"][8]["timerange"][3]["value"][2]["#text"] + " km/j",
+        "wk": data[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"] + " km/j",
+        "wd": data[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"] + " km/j",
     }
 
 print(baca_fail("hasil.txt").format(**data_persiapan(0)))
