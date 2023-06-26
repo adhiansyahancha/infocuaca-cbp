@@ -16,7 +16,7 @@ Tugas pengerjaan, 22 Juni 2023:
 2. Lanjutkan fitor tampilan karakteristik cuaca (bersama-sama)              Masih pengembangan
 
 Tugas pengerjaan, 25 Juni 2023 (menyesuaikan):
-1. Lanjutkan fitor tampilan karakteristik cuaca (bersama-sama)
-2. Buat fitur output terpisah dari perintah (Ade)
-3. Buat fitur perintah "tampilkan" (Ancha)
-4. Buat fitur pengujian string pencarian berpetik dengan regex (Ralfi) 
+1. Lanjutkan fitor tampilan karakteristik cuaca (bersama-sama)              OK
+2. Buat fitur output terpisah dari perintah (Ade)                           Ditunda
+3. Buat fitur perintah "tampilkan" (Ancha)                                  Ditunda
+4. Buat fitur pengujian string pencarian berpetik dengan regex (Ralfi)      OK 
