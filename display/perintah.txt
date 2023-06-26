@@ -1,5 +1,6 @@
 Berikut ini adalah perintah yang tersedia:
-    cari [NAMA_KOTA]        : Cari Kota
+    cari "nama_kota"        : Cari kota di pangkalan data
+    tampilkan "nama_kota"   : Tampilkan informasi cuaca sebuah kota
     daftar-kota             : Tampilkan daftar kota-kota Jawa Tengah
     tentang                 : Tentang Para Pengembang
     keluar                  : Keluar dari aplikasi

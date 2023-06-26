@@ -15,8 +15,18 @@ Tugas pengerjaan, 22 Juni 2023:
 1. Uraikan perintah dari pengguna (Ancha)                                   Belum selesai
 2. Lanjutkan fitor tampilan karakteristik cuaca (bersama-sama)              Masih pengembangan
 
-Tugas pengerjaan, 25 Juni 2023 (menyesuaikan):
+Tugas pengerjaan, 26 Juni 2023 (menyesuaikan):
 1. Lanjutkan fitor tampilan karakteristik cuaca (bersama-sama)              OK
-2. Buat fitur output terpisah dari perintah (Ade)                           Ditunda
-3. Buat fitur perintah "tampilkan" (Ancha)                                  Ditunda
+2. Buat fitur output terpisah dari perintah (Ade)                           Diganti
+3. Buat fitur perintah "tampilkan" (Ancha)                                  Ditunda, OK
 4. Buat fitur pengujian string pencarian berpetik dengan regex (Ralfi)      OK 
+5. Perbarui tampilan hasil.txt (Ade)                                        OK
+
+Jeda kosong
+1. Susun laporan tugas besar
+2. Kelola dan tes aplikasi
+3. Buat kode lebih baik
+4. Perbaiki bug, terutama untuk pencarian
+
+Tugas pengerjaan, 3 Juni 2023:
+1. Melengkapi laporan (bersama-sama, Dava)

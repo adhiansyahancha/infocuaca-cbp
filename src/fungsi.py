@@ -4,7 +4,7 @@ import os
 # Baca fail dari direktori 'display'
 def baca_fail(fail) -> None:
     DIR_FAIL = os.path.join(
-        os.path.dirname(__file__).replace("infocuaca-cbp", "") + "display", f"{fail}"
+        os.path.dirname(__file__).replace("src", "") + "display", f"{fail}"
     )
     with open(DIR_FAIL, encoding="utf-8") as _fail:
         return _fail.read()
@@ -34,6 +34,15 @@ def daftar_kota(api_cuaca) -> list:
         data.append(api_cuaca[kota]["@description"])
 
     return data
+
+
+# Konversi nama kota ke kode untuk API
+def konversi_ke_kode(data):
+    konversi = {}
+    for kode in range(len(data)):
+        konversi[f"{data[kode]['@description']}"] = kode
+
+    return konversi
 
 
 # Segarkan konsol
