@@ -38,21 +38,34 @@ def respon_data_cuaca():
 # Uraikan perintah pengguna
 def urai_perintah(masukan, area_cuaca):
     if masukan[:4] == 'cari':
-        """
-        Pseudocode:
-        1. User memasukkan [cari "semarang"]
-        2. Ambil [semarang] TEPAT di dalam petik dua
-        """
-        pass
+        pola = r'^cari "(.*)"$'  
+        hasil = re.match(pola, masukan)
+        try:
+            kueri = hasil.group(1)
+        except AttributeError:
+            print("Pencarian tidak valid\n")
+            
+        try:
+            if kueri:
+                hasil_pencarian = cari_kota(urutkan_kota(daftar_kota(area_cuaca)), kueri.title())
+                assert hasil_pencarian == 0
+                if hasil_pencarian != 0:
+                    print(f'Kota \"{kueri.title()}\" ditemukan di pangkalan data\n')
+                else:
+                    print(f"Hasil pencarian untuk \'{kueri}\' tidak ditemukan")
+            else:
+                print("Kueri tidak valid")
+        except UnboundLocalError:
+            print("Pencarian tidak Valid\n")
 
-    if masukan[:10] == 'tampilkan':
+    elif masukan[:10] == 'tampilkan':
         """
         Pseuducode mirip dengan cari
         """
         pass
 
     # Pencocokan untuk perintah non-argumen
-    if masukan == 'daftar-kota':
+    elif masukan == 'daftar-kota':
         pass
     elif masukan == 'tentang':
         tentang(area_cuaca)
