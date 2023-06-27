@@ -38,7 +38,7 @@ def respon_data_cuaca():
 # Uraikan perintah pengguna
 def urai_perintah(masukan, area_cuaca):
     if masukan[:4] == 'cari':
-        pola = r'^cari "(.*)"$'  
+        pola = r'^cari "(.*)"$'
         hasil = re.match(pola, masukan)
         try:
             kueri = hasil.group(1)
@@ -66,7 +66,7 @@ def urai_perintah(masukan, area_cuaca):
             print("Kueri tidak valid\n")
 
         if kueri:
-            hasil(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
+            tampilkan(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
             kode_inti(area_cuaca)
         else:
             print("Kueri tidak valid")
@@ -95,7 +95,7 @@ def tentang(area_cuaca):
     kode_inti(area_cuaca)
 
 
-def hasil(area_cuaca, kode):
+def tampilkan(area_cuaca, kode):
     koleksi_format = {
         "cty": area_cuaca[kode]["@description"],
         "prv": area_cuaca[kode]["@domain"],
