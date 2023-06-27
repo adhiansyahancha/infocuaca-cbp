@@ -48,7 +48,6 @@ def urai_perintah(masukan, area_cuaca):
         try:
             if kueri:
                 hasil_pencarian = cari_kota(urutkan_kota(daftar_kota(area_cuaca)), kueri.title())
-                assert hasil_pencarian == 0
                 if hasil_pencarian != -1:
                     print(f'Kota \"{kueri.title()}\" ditemukan di pangkalan data\n')
                 else:
@@ -58,11 +57,19 @@ def urai_perintah(masukan, area_cuaca):
         except UnboundLocalError:
             print("Pencarian tidak Valid\n")
 
-    elif masukan[:10] == 'tampilkan':
-        """
-        Pseuducode mirip dengan cari
-        """
-        pass
+    elif masukan[:9] == 'tampilkan':
+        pola = r'^tampilkan "(.*)"$'  
+        hasil = re.match(pola, masukan)
+        try:
+            kueri = hasil.group(1)
+        except AttributeError:
+            print("Kueri tidak valid\n")
+
+        if kueri:
+            hasil(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
+            kode_inti(area_cuaca)
+        else:
+            print("Kueri tidak valid")
 
     # Pencocokan untuk perintah non-argumen
     elif masukan == 'daftar-kota':
