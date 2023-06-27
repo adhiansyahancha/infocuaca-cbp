@@ -1,28 +1,31 @@
+import os
 import re
+import time
+import locale
 import requests
-from tentang import tentang
-from hasil import hasil
 from fungsi import (
     baca_fail,
     segarkan_konsol,
     cari_kota,
     daftar_kota,
     urutkan_kota,
-    konversi_ke_kode
+    konversi_ke_kode,
 )
+
+locale.setlocale(locale.LC_TIME, "id_ID")
 
 
 # Inti eksekusi
-def kode_inti(respon_api):
+def kode_inti(area_cuaca):
     segarkan_konsol()
 
-    print(baca_fail("kepala.txt")
-          + baca_fail("intro.txt")
-          + baca_fail("perintah.txt"))
+    print(baca_fail("kepala.txt"))
+    print(baca_fail("intro.txt"))
+    print(baca_fail("perintah.txt"))
 
     while True:
         argumen_pengguna = input("infocuaca-processor % ")
-        urai_perintah(argumen_pengguna, respon_api)
+        urai_perintah(argumen_pengguna, area_cuaca)
 
 
 # Panggil untuk mendapatkan respon API
@@ -33,76 +36,98 @@ def respon_data_cuaca():
 
 
 # Uraikan perintah pengguna
-def urai_perintah(masukan, respon_api):
-    # Penanganan argumen pencarian
-    if 'cari' in masukan and '"' in masukan:
-        masukan = masukan.split(' ')
-        try:
-            masukan[1] = masukan[1] + ' ' + masukan[2]
-        except IndexError:
-            pass
-        else:
-            pass
+def urai_perintah(masukan, area_cuaca):
+    if masukan[:4] == 'cari':
+        """
+        Pseudocode:
+        1. User memasukkan [cari "semarang"]
+        2. Ambil [semarang] TEPAT di dalam petik dua
+        """
+        pass
 
-        pola = r'[^\w\s]'
-        kueri = re.sub(pola, '', masukan[1])
-        kota_kota = daftar_kota(respon_api)
-        hasil_pencarian = cari_kota(urutkan_kota(kota_kota), kueri=kueri.title())
+    if masukan[:10] == 'tampilkan':
+        """
+        Pseuducode mirip dengan cari
+        """
+        pass
 
-        if hasil_pencarian != 0:
-            print(f"Hasil pencarian menemukan {urutkan_kota(kota_kota)[hasil_pencarian]} di pangkalan data\n")
-        else:
-            print(f"\"{kueri}\" tidak dapat ditemukan")
-    elif 'tampilkan' in masukan and '"' in masukan:
-        masukan = masukan.split(' ')
-        try:
-            masukan[1] = masukan[1] + ' ' + masukan[2]
-        except IndexError:
-            pass
-        else:
-            pass
-
-        pola = r'[^\w\s+]'
-        kueri = re.sub(pola, '', masukan[1])
-        # try:
-        kode_kueri = konversi_ke_kode(respon_api)[kueri.title()]
-        hasil(respon_api, kode_kueri)
-        kode_inti(respon_api)
-        # except KeyError:
-        #     print(f"Kueri {kueri} tidak dapat ditemukan\n")
-        # except UnboundLocalError:
-        #     print("Kueri tidak valid")
-
-    # Pola pencocokan untuk masukan tanpa argumen
+    # Pencocokan untuk perintah non-argumen
+    if masukan == 'daftar-kota':
+        pass
+    elif masukan == 'tentang':
+        tentang(area_cuaca)
+    elif masukan == 'bersihkan':
+        segarkan_konsol()
+        kode_inti(area_cuaca)
+    elif masukan in ('keluar', 'exit', 'quit'):
+        print("Keluar")
+        exit(0)
+    elif masukan.isspace() or masukan in '':
+        pass
     else:
-        match masukan:
-            case "daftar-kota":
-                print(daftar_kota(respon_api), "\n")
-            case "bersihkan":
-                segarkan_konsol()
-                kode_inti(respon_api)
-            case "tentang":
-                tentang()
-                kode_inti(respon_api)
-            case "keluar" | "exit" | "quit":
-                print("Keluar")
-                exit(0)
-            case "":
-                pass
-            case _:
-                print('Perintah tidak dapat dikenali\n')
+        print(f"Perintah {masukan} tidak valid\n")
+
+
+def tentang(area_cuaca):
+    os.system("cls||clear")
+    print("\r" + baca_fail("kepala.txt") + baca_fail("tentang.txt") + "\n")
+    input("\rMasukkan [Q] untuk keluar ")
+    kode_inti(area_cuaca)
+
+
+def hasil(area_cuaca, kode):
+    koleksi_format = {
+        "cty": area_cuaca[kode]["@description"],
+        "prv": area_cuaca[kode]["@domain"],
+        "ltg": area_cuaca[kode]["@latitude"],
+        "bjr": area_cuaca[kode]["@longitude"],
+        "dt": time.strftime("%d %B %Y"),
+        "h0": area_cuaca[kode]["parameter"][0]["timerange"][0]["value"]["#text"] + "%",
+        "h1": area_cuaca[kode]["parameter"][0]["timerange"][1]["value"]["#text"] + "%",
+        "h2": area_cuaca[kode]["parameter"][0]["timerange"][2]["value"]["#text"] + "%",
+        "h3": area_cuaca[kode]["parameter"][0]["timerange"][3]["value"]["#text"] + "%",
+        "hx": area_cuaca[kode]["parameter"][1]["timerange"][0]["value"]["#text"] + "%",
+        "hm": area_cuaca[kode]["parameter"][3]["timerange"][0]["value"]["#text"] + "%",
+        "t0": area_cuaca[kode]["parameter"][5]["timerange"][0]["value"][0]["#text"]
+        + "°C",
+        "t1": area_cuaca[kode]["parameter"][5]["timerange"][1]["value"][0]["#text"]
+        + "°C",
+        "t2": area_cuaca[kode]["parameter"][5]["timerange"][2]["value"][0]["#text"]
+        + "°C",
+        "t3": area_cuaca[kode]["parameter"][5]["timerange"][3]["value"][0]["#text"]
+        + "°C",
+        "tx": area_cuaca[kode]["parameter"][2]["timerange"][0]["value"][0]["#text"]
+        + "°C",
+        "tm": area_cuaca[kode]["parameter"][4]["timerange"][0]["value"][0]["#text"]
+        + "°C",
+        "w0": area_cuaca[kode]["parameter"][8]["timerange"][0]["value"][2]["#text"]
+        + " km/j",
+        "w1": area_cuaca[kode]["parameter"][8]["timerange"][1]["value"][2]["#text"]
+        + " km/j",
+        "w2": area_cuaca[kode]["parameter"][8]["timerange"][2]["value"][2]["#text"]
+        + " km/j",
+        "w3": area_cuaca[kode]["parameter"][8]["timerange"][3]["value"][2]["#text"]
+        + " km/j",
+        "wk": area_cuaca[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"],
+        "wd": area_cuaca[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"],
+    }
+    os.system("cls||clear")
+    print(baca_fail("kepala.txt") + baca_fail("hasil.txt").format(**koleksi_format))
+    input("\rMasukkan [Q] untuk keluar ")
 
 
 if __name__ == "__main__":
     segarkan_konsol()
-    print(baca_fail("kepala.txt") + "Memuat...")
+    print(baca_fail("kepala.txt"))
+    print("Memuat data...")
 
     try:
         r = respon_data_cuaca().status_code
     except requests.exceptions.ConnectionError as err:
         print(f"Gagal menghubungkan API. Berikut ini errornya:\n{err}")
+        input()
 
     respon_json_cuaca = respon_data_cuaca().json()
     area_cuaca = respon_json_cuaca["row"]["data"]["forecast"]["area"]
 
-    kode_inti(respon_api=area_cuaca)
+    kode_inti(area_cuaca=area_cuaca)

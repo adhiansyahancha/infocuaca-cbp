@@ -8,22 +8,22 @@ Endpoint API dari Team 6 TK1 Universitas Muhammadiyah Kalimantan Timur (cuaca.um
 Terima kasih spesial untuk pustaka Request (request.readthedocs.io)
 
 PARA PENGEMBANG
-Ketua Project Tubes
+Pemimpin pengembang
 Nama   : Adhiansyah Muhammad Pradana Farawowan
 NIM    : 2211104038
 Github : https://github.com/adhiansyahancha
 
-Programmer 1 & Tester
+Pemrogram 1 & Tester
 Nama   : Muhammad Ralfi
 NIM    : 2211104054
 Github : https://github.com/rafiyamanaka
 
-Programmer 2
+Pemrogram 2
 Nama   : Dwi Candra Pratama
 NIM    : 2211104035
 Github : https://github.com/DCandraPratama
 
-Programmer 3
+Pemrogram 3
 Nama   : Dava Ardana
 NIM    : 2211104048
 Github : https://github.com/davaardana

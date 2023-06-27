@@ -1,0 +1,352 @@
+commit bcd45bbc28dad9b19f7988bb3547b6bf283ca4d7
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 14:27:18 2023 +0700
+
+    Menghapus redundansi
+
+commit 1dff1186aef65a6b1fd5f1642105079b5265883a
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 14:26:42 2023 +0700
+
+    Pembaruan TODO
+
+commit 302928d201e026e7a7b50ff5cb2903d40a9de9af
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 14:23:49 2023 +0700
+
+    Perbaikan tampilan data
+
+commit f21f247b2b24c385dbbd8b307cc3627d60e14b33
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 14:18:22 2023 +0700
+
+    perbaikan tes.py lagi
+
+commit 5a9317c853335a9c12c1417c6dfb3742694eef69
+Author: davaardana <davaardanava10@gmail.com>
+Date:   Mon Jun 26 14:16:07 2023 +0700
+
+    perbaikan kecil
+
+commit 1e88905ed144a2e18e88fcdfffbb8dca336067c7
+Author: davaardana <davaardanava10@gmail.com>
+Date:   Mon Jun 26 14:12:43 2023 +0700
+
+    menambahkan notasi satuan
+
+commit cebc5566efb3e5816b4ae5eedbfeeb616d7f9066
+Author: DCandraPratama <dwicandrapratama4@gmail.com>
+Date:   Mon Jun 26 14:07:38 2023 +0700
+
+    perbaikan error tambah index
+
+commit 9a436299dc9f319512d8f6726528f400ef639122
+Author: davaardana <davaardanava10@gmail.com>
+Date:   Mon Jun 26 13:36:56 2023 +0700
+
+    melanjutkan data dari candra
+
+commit b6292e080814988b7871932bc2563d8555294ec7
+Author: DCandraPratama <dwicandrapratama4@gmail.com>
+Date:   Mon Jun 26 13:27:46 2023 +0700
+
+    ada progres
+
+commit 3d05de906a3feead682715b9e7f6b5d101f496a3
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Mon Jun 26 13:20:18 2023 +0700
+
+    menambahkan fitur baru
+
+commit 994e461a277f77c5045f15935d9f719d36728627
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 26 13:16:35 2023 +0700
+
+    Memperbaiki design output
+
+commit 651de388c349368db46d188799ce447d38652638
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 12:36:12 2023 +0700
+
+    Tes untuk penyesuaian hasil.txt
+
+commit 815da91f3d5384f1daf2a8de68c79590e8ab1133
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 12:25:11 2023 +0700
+
+    Format fail python
+
+commit 16afccb0bf9899309a5697c6d911597221958862
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Mon Jun 26 12:22:57 2023 +0700
+
+    hapus menu validasi input dan test pada file fungsi
+
+commit 8b0a1f23ccd6f972f698c19d75a419050b8a5c58
+Merge: 047a27e 8f0df24
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Mon Jun 26 12:05:38 2023 +0700
+
+    menambahkan uji substring
+
+commit 047a27ee57bc80d103ce403d04d244dfe2c8a6db
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Mon Jun 26 12:04:09 2023 +0700
+
+    menambahkan uji substring
+
+commit 8f0df24ab065f0e1cda5ad3a7e2bb8c2da23e037
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 26 11:55:28 2023 +0700
+
+    Mendesign fitur hasil
+
+commit cc8846f219a4a525924685473be037cce995fbfb
+Merge: 618472e 9d85c70
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 26 11:13:34 2023 +0700
+
+    Merge branch 'main' of https://github.com/adhiansyahancha/tubes-praktikum-pemrograman
+
+commit 618472e0e022d7a146c7f82dff726ad202299397
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 26 11:10:52 2023 +0700
+
+    Mendesign fitur hasil
+
+commit 9d85c70e1d4eec62bc09378faf738b4db2c0c41a
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 10:43:01 2023 +0700
+
+    Perubahan formatting
+
+commit 0df1017fc3e6d528943d91ccc3d7a6686d33cc26
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Sun Jun 25 06:31:17 2023 +0700
+
+    Update signifikan
+
+commit d3a07e247d29c1d028f9855ce6b482b70a12c4c0
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Thu Jun 22 17:27:15 2023 +0700
+
+    Tugas baru!
+
+commit 4abf8f47d0857d19fc552df83b50671fed03f51e
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Thu Jun 22 17:23:58 2023 +0700
+
+    Menambahkan fitur output terpisah dari perintah
+    
+    + pengosongan tes.py
+
+commit 4e2bfdece414c2eb1d11d277770f31c7f81ebb23
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Thu Jun 22 17:22:22 2023 +0700
+
+    Perubahan sedikit pada fungsi.py
+
+commit 6fc697b00f403497e812b828f5a3a759691980a9
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Thu Jun 22 17:20:49 2023 +0700
+
+    Update besar untuk penguraian perintah pengguna
+
+commit 6461b34829386642ae09bd30e60ca5079f5daca6
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Thu Jun 22 11:55:27 2023 +0700
+
+    Update main.py, fungsi.py
+
+commit 5a4e1fc806ba3d9c559415e7fe790cdab48370f2
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Thu Jun 22 11:51:37 2023 +0700
+
+    Update tampilan hasil
+
+commit e2337c716c125d4f6c538e03177e7da9bee861e1
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Thu Jun 22 11:09:03 2023 +0700
+
+    Penambahan fungsi penguraian perintah. Belum lengkap
+
+commit 5d2957ff86a3d7a8d4085b09b211c01c7562e7b7
+Merge: 538acb2 3e2a7af
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Wed Jun 21 23:44:44 2023 +0700
+
+    Merge branch 'main' of https://github.com/adhiansyahancha/tubes-praktikum-pemrograman
+
+commit 538acb23462beb1abe6ceeaf2c097a8b95a28c92
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Wed Jun 21 13:46:51 2023 +0700
+
+    tambahkan data baru
+
+commit 3e2a7af9db51a8431b51ca1431393dedeff6d653
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 21 13:45:22 2023 +0700
+
+    Tugas baru!
+
+commit 6857308eed3f12ee9423051190e38c3f668a757a
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 21 13:21:24 2023 +0700
+
+    Menambahkan assertion
+
+commit 1517d5a8b70846fbf0da8ad19f3cd006cd0ceb9a
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 21 13:17:51 2023 +0700
+
+    Memperbarui main.py dan fungsi.py
+
+commit cb8a9e252ef08963dbdcbcb22a6d16f5f4a055d5
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Wed Jun 21 13:08:18 2023 +0700
+
+    Menambahkan menu tentang
+
+commit ae6bae090e3fd1efc4268e3fbb167e02792ad6e6
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 21 11:33:49 2023 +0700
+
+    Koreksi kode dan merangkai main.py
+
+commit 30004dbfadfce9b67d8153ef16e3949f3eea6d0c
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 21 11:02:15 2023 +0700
+
+    Reorganisasi kode kedua
+
+commit 962c1470bb4ecf5c1fe9b101b86e35c96ac0ec2d
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 21 10:12:18 2023 +0700
+
+    Reorganisasi kode
+
+commit 4d0af81e8ab26b9467c4db5471918d6b598cf639
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Tue Jun 20 16:19:02 2023 +0700
+
+    Tugas baru (2)
+
+commit 5097bd182cb67d78faf81f660c3223fee1a8bcda
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Tue Jun 20 16:18:15 2023 +0700
+
+    Tugas baru
+
+commit 37c1b18061eb47cf6bc03b1ebe450547a735c494
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 13:12:08 2023 +0700
+
+    Ganti nama variabel kueri
+
+commit 4c1c3361f16a470506e370617d21d6eb372653a2
+Author: davaardana <davaardanava10@gmail.com>
+Date:   Mon Jun 19 13:10:05 2023 +0700
+
+    menambahkan fungsi cari kota
+
+commit e839df39ba56b2272bcf80489bb7012aae7b7585
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 13:00:20 2023 +0700
+
+    Mengubah sedikit argumen daftar_kota
+
+commit 0ceb479031ea27c76bb58881caa162f7293c025b
+Author: DCandraPratama <dwicandrapratama4@gmail.com>
+Date:   Mon Jun 19 12:56:45 2023 +0700
+
+    Menambahkan data nama-nama kota
+
+commit 390c90f37764e8a38008018cdfc1c5ba567f98ba
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Mon Jun 19 12:47:36 2023 +0700
+
+    ganti nama fungsi
+
+commit 4341fdd0c09be01433277717d6164fd5870d5c55
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Mon Jun 19 12:43:43 2023 +0700
+
+    Tambah validasi input
+
+commit 6f91377d9df268904c791a55f1312940f952b5c9
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 12:27:49 2023 +0700
+
+    Menambahkan operasi.py
+
+commit e30eb32cfb38ae3ea3125c3381e35fabd2ae6d93
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 19 12:13:06 2023 +0700
+
+    Menambahkan header.txt
+
+commit 713b67d776e80207cab8104e4c9c971d59caa7e7
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 19 12:11:23 2023 +0700
+
+    Menambahkan hasil.txt
+
+commit 9e25bc808d1f3995e6efcd3819f28422df6e52cd
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 19 12:10:42 2023 +0700
+
+    Menambahkan main.txt
+
+commit e766c79f618b88f4beb410ef182e008cd5865cfb
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 11:42:04 2023 +0700
+
+    Menambahkan figlet di main.txt
+
+commit f5ac5007edb128410540ebf0de42e1db59f05fb6
+Author: Ade Fatkhul Anam <ade.falnam@gmail.com>
+Date:   Mon Jun 19 11:36:07 2023 +0700
+
+    ain
+
+commit a00f5dafdb488d4a751f7dd53992385ef30bd037
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 11:22:56 2023 +0700
+
+    TODO hari ini
+
+commit ff15220bbfc436fc29b627d5f33cfc70d2bd4d64
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 10:32:41 2023 +0700
+
+    Buat file utama baru
+
+commit b469427a4df12c56d08366d3fe4649c68589a45d
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 19 10:27:17 2023 +0700
+
+    Buat README baru
+
+commit e760d03c646ce3eafe77298b045a194fc62d88b3
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Sat Jun 17 20:40:21 2023 +0700
+
+    Menghapus Django; Ganti ke platform CLI
+
+commit 3090ea053482238d3154c53d8cb138494d96a9a6
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Sat Jun 17 19:20:28 2023 +0700
+
+    Memperbarui README
+
+commit 3e3cef995c436e6ce560cfc11f69d460080e86a5
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Sat Jun 17 16:48:46 2023 +0700
+
+    Inisiasi Django
+
+commit 9f71682ed4f72bc6cfe09ece7197d628896da028
+Author: Adhiansyah Ancha <adhiansyah.ancha@gmail.com>
+Date:   Wed Jun 14 11:30:15 2023 +0700
+
+    Initial commit
