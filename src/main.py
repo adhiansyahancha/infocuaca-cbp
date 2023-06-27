@@ -49,7 +49,7 @@ def urai_perintah(masukan, area_cuaca):
             if kueri:
                 hasil_pencarian = cari_kota(urutkan_kota(daftar_kota(area_cuaca)), kueri.title())
                 assert hasil_pencarian == 0
-                if hasil_pencarian != 0:
+                if hasil_pencarian != -1:
                     print(f'Kota \"{kueri.title()}\" ditemukan di pangkalan data\n')
                 else:
                     print(f"Hasil pencarian untuk \'{kueri}\' tidak ditemukan")

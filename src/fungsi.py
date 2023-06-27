@@ -23,7 +23,7 @@ def cari_kota(data_kota, kueri) -> int:
         else:
             return mid_index
 
-    return 0
+    return -1
 
 
 # Tampilkan daftar kota-kota Jawa Tengah
