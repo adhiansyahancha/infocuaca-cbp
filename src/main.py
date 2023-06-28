@@ -44,6 +44,14 @@ def urai_perintah(masukan, area_cuaca):
             kueri = hasil.group(1)
         except AttributeError:
             print("Pencarian tidak valid\n")
+
+        """
+        Jika kueri sama dengan "Pelabuhan Semarang"
+        maka beri pesan khusus di mana informasi cuaca
+        tidak tersedia
+
+        Jika kueri tidak sama, maka lanjutkan ke try di bawah
+        """
             
         try:
             if kueri:
