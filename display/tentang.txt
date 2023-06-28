@@ -8,7 +8,7 @@ Endpoint API dari Team 6 TK1 Universitas Muhammadiyah Kalimantan Timur (cuaca.um
 Terima kasih spesial untuk pustaka Request (request.readthedocs.io)
 
 PARA PENGEMBANG
-Pemimpin pengembang
+Pemimpin proyek
 Nama   : Adhiansyah Muhammad Pradana Farawowan
 NIM    : 2211104038
 Github : https://github.com/adhiansyahancha

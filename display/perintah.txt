@@ -1,7 +1,7 @@
 Berikut ini adalah perintah yang tersedia:
-    cari "nama_kota"        : Cari kota di pangkalan data
+    cari "nama_kota"        : Cari kota di data API
     tampilkan "nama_kota"   : Tampilkan informasi cuaca sebuah kota
-    daftar-kota             : Daftar kota-kota di Jawa Tengah
+    daftar-kota             : Daftar kota-kota yang tersedia di data API
     tentang                 : Tentang program dan para pengembang
     bersihkan               : Bersihkan layar konsol
-    keluar                  : Keluar dari aplikasi
+    keluar                  : Keluar dari program

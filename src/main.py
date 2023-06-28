@@ -44,18 +44,18 @@ def urai_perintah(masukan, area_cuaca):
             kueri = hasil.group(1)
         except AttributeError:
             print("Pencarian tidak valid\n")
-            
-        try:
-            if kueri:
-                hasil_pencarian = cari_kota(urutkan_kota(daftar_kota(area_cuaca)), kueri.title())
-                if hasil_pencarian != -1:
-                    print(f'Kota \"{kueri.title()}\" ditemukan di pangkalan data\n')
+        else:
+            try:
+                if kueri:
+                    hasil_pencarian = cari_kota(urutkan_kota(daftar_kota(area_cuaca)), kueri.title())
+                    if hasil_pencarian != -1:
+                        print(f'Kota \"{kueri.title()}\" ditemukan di pangkalan data\n')
+                    else:
+                        print(f"Hasil pencarian untuk \'{kueri}\' tidak ditemukan\n")
                 else:
-                    print(f"Hasil pencarian untuk \'{kueri}\' tidak ditemukan")
-            else:
-                print("Kueri tidak valid")
-        except UnboundLocalError:
-            print("Pencarian tidak Valid\n")
+                    print("Kueri tidak valid")
+            except UnboundLocalError:
+                print("Pencarian tidak Valid\n")
 
     elif masukan[:9] == 'tampilkan':
         pola = r'^tampilkan "(.*)"$'  
