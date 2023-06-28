@@ -44,14 +44,6 @@ def urai_perintah(masukan, area_cuaca):
             kueri = hasil.group(1)
         except AttributeError:
             print("Pencarian tidak valid\n")
-
-        """
-        Jika kueri sama dengan "Pelabuhan Semarang"
-        maka beri pesan khusus di mana informasi cuaca
-        tidak tersedia
-
-        Jika kueri tidak sama, maka lanjutkan ke try di bawah
-        """
             
         try:
             if kueri:
@@ -73,11 +65,14 @@ def urai_perintah(masukan, area_cuaca):
         except AttributeError:
             print("Kueri tidak valid\n")
 
-        if kueri:
-            tampilkan(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
-            kode_inti(area_cuaca)
+        if kueri.title() == "Pelabuhan Semarang":
+            print("Informasi cuaca untuk Pelabuhan Semarang tidak tersedia karena beda domain pada data API\n")
         else:
-            print("Kueri tidak valid")
+            if kueri:
+                tampilkan(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
+                kode_inti(area_cuaca)
+            else:
+                print("Kueri tidak valid")
 
     # Pencocokan untuk perintah non-argumen
     elif masukan == 'daftar-kota':
