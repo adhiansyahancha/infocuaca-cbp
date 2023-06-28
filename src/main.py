@@ -73,26 +73,9 @@ def urai_perintah(masukan, area_cuaca):
 
     # Pencocokan untuk perintah non-argumen
     elif masukan == 'daftar-kota':
-        """
-        1. Panggil fungsi daftarkota()
+        daftarkota(area_cuaca)
+        kode_inti(area_cuaca)
 
-        Untuk fungsi daftarkota itu sendiri()
-        1. Buat fungsi barunya
-        2. Pertama: Bersihkan konsol
-        3. Selanjutnya: Simpan hasil daftar_kota(api_cuaca) ke 
-        dalam variabel
-            (btw fungsinya itu dari fungsi.py)
-        4. Print kepala.txt dengan baca_fail(nama_fail)
-        5. Karena hasil daftar_kota() itu adalah list, print setiap 
-        elemen sebagai daftar bernomor
-        Misal:
-            1. Banjarnegara
-            2. Brebes
-            3. dst.
-        6. Tambahkan kode input() untuk mencegah fungsi keluar
-        hingga user masukkan input
-        7. Tambahkan kode_inti(area_cuaca)
-        """
     elif masukan == 'tentang':
         tentang(area_cuaca)
     elif masukan == 'bersihkan':
@@ -105,7 +88,15 @@ def urai_perintah(masukan, area_cuaca):
         pass
     else:
         print(f"Perintah {masukan} tidak valid\n")
+        
+def daftarkota(area_cuaca):
+    segarkan_konsol()
+    list_kota = daftar_kota(area_cuaca)
+    print(baca_fail('kepala.txt'))
+    for kota in list_kota:
+        print(f"{list_kota.index(kota)+1}. {kota}")
 
+    input("Masukan Q untuk keluar: ")
 
 def tentang(area_cuaca):
     os.system("cls||clear")
