@@ -1,12 +1,12 @@
-Tentang Aplikasi infocuaca-cbp
+Tentang program infocuaca-cbp
 
-Aplikasi dibuat sebagai tugas besar Praktikum Pemrograman 1 Semester 2 S1SE-06-B.
+Program dibuat sebagai tugas besar Praktikum Pemrograman 1 Semester 2 S1SE-06-B.
 Menampilkan data prakiraan cuaca kota Jawa Tengah melalui konsol.
 
 Data cuaca diproduksi oleh Badan Meteorologi, Klimatologi, dan Geofisika (bmkg.go.id)
 Endpoint API dari Team 6 TK1 Universitas Muhammadiyah Kalimantan Timur (cuaca.umkt.ac.id)
 Terima kasih spesial untuk pustaka Request (request.readthedocs.io)
-
+--
 PARA PENGEMBANG
 Pemimpin proyek
 Nama   : Adhiansyah Muhammad Pradana Farawowan
