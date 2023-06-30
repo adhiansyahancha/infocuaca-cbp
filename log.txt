@@ -1,3 +1,81 @@
+commit 8a22722ea74f031da5b01a7a50451b30c7de4f87
+Author: DCandraPratama <dwicandrapratama4@gmail.com>
+Date:   Fri Jun 30 09:29:30 2023 +0700
+
+    memperbaiki sedikit isiannya
+
+commit 71ca1587c527c804eacd35de0e522b58e2caecf1
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 28 21:43:38 2023 +0700
+
+    Update tentang.txt
+
+commit d31732dc59c8bcbf5a540fd4191542c309fae0e5
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 28 21:42:36 2023 +0700
+
+    Penyelesaian program
+
+commit f916aaadf36f1864efad6cc1c475f76f0c38e3ea
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Wed Jun 28 20:50:39 2023 +0700
+
+    membuat fungsi khusus untuk pelabuhan semarang
+
+commit c92f11d912e2c382b0b67ebb87afdfaa862f23f2
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 28 20:34:52 2023 +0700
+
+    Deskripsi untuk penanganan info pelabuha nsemarang
+
+commit d77735cfcf37fdbeb352d82c94db8d7d88dc3bb9
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Wed Jun 28 20:31:35 2023 +0700
+
+    membuat fitur daftar kota
+
+commit aaafad0bfe1c3c0287bd427c6a492fae68754389
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Wed Jun 28 20:04:42 2023 +0700
+
+    Deskripsi untuk fungsi daftar-kota
+
+commit e59476bc1befe45250c24b0778e7ed6e00935cc2
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Tue Jun 27 22:03:56 2023 +0700
+
+    Perbaikan bug
+
+commit caa882acd4fc26ec2f41a27e52c407339da21417
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Tue Jun 27 21:57:53 2023 +0700
+
+    perbaikan tampilkan
+
+commit 0a02d1a10715899654df2cf2cf680fbf58fb5612
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Tue Jun 27 21:04:39 2023 +0700
+
+    Perbaikan return cari_kota
+
+commit 968ac23524983739bb221047656b44f6779f4c5b
+Author: rafiyamanaka <rafiyamanaka32@gmail.com>
+Date:   Tue Jun 27 20:58:35 2023 +0700
+
+    fitur pencarian
+
+commit f2967b4dd5f9619d26b42eac0cd670175754e3ef
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Tue Jun 27 12:12:47 2023 +0700
+
+    Reinintegrasi dan penulisan ulang pencarian
+
+commit 6161fe325f4ae3b80c093f821781ff74c9c2a2e6
+Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+Date:   Mon Jun 26 21:09:15 2023 +0700
+
+    Integrasi dan perapian besar
+
 commit bcd45bbc28dad9b19f7988bb3547b6bf283ca4d7
 Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
 Date:   Mon Jun 26 14:27:18 2023 +0700

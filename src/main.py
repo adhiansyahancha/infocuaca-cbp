@@ -37,7 +37,7 @@ def respon_data_cuaca():
 
 # Uraikan perintah pengguna
 def urai_perintah(masukan, area_cuaca):
-    if masukan[:4] == 'cari':
+    if masukan[:4] == "cari":
         pola = r'^cari "(.*)"$'
         hasil = re.match(pola, masukan)
         try:
@@ -47,18 +47,20 @@ def urai_perintah(masukan, area_cuaca):
         else:
             try:
                 if kueri:
-                    hasil_pencarian = cari_kota(urutkan_kota(daftar_kota(area_cuaca)), kueri.title())
+                    hasil_pencarian = cari_kota(
+                        urutkan_kota(daftar_kota(area_cuaca)), kueri.title()
+                    )
                     if hasil_pencarian != -1:
-                        print(f'Kota \"{kueri.title()}\" ditemukan di pangkalan data\n')
+                        print(f'Kota "{kueri.title()}" ditemukan di pangkalan data\n')
                     else:
-                        print(f"Hasil pencarian untuk \'{kueri}\' tidak ditemukan\n")
+                        print(f"Hasil pencarian untuk '{kueri}' tidak ditemukan\n")
                 else:
                     print("Kueri tidak valid")
             except UnboundLocalError:
                 print("Pencarian tidak Valid\n")
 
-    elif masukan[:9] == 'tampilkan':
-        pola = r'^tampilkan "(.*)"$'  
+    elif masukan[:9] == "tampilkan":
+        pola = r'^tampilkan "(.*)"$'
         hasil = re.match(pola, masukan)
         try:
             kueri = hasil.group(1)
@@ -66,7 +68,9 @@ def urai_perintah(masukan, area_cuaca):
             print("Kueri tidak valid\n")
 
         if kueri.title() == "Pelabuhan Semarang":
-            print("Informasi cuaca untuk Pelabuhan Semarang tidak tersedia karena beda domain pada data API\n")
+            print(
+                "Informasi cuaca untuk Pelabuhan Semarang tidak tersedia karena beda domain pada data API\n"
+            )
         else:
             if kueri:
                 tampilkan(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
@@ -75,31 +79,33 @@ def urai_perintah(masukan, area_cuaca):
                 print("Kueri tidak valid")
 
     # Pencocokan untuk perintah non-argumen
-    elif masukan == 'daftar-kota':
+    elif masukan == "daftar-kota":
         daftarkota(area_cuaca)
         kode_inti(area_cuaca)
 
-    elif masukan == 'tentang':
+    elif masukan == "tentang":
         tentang(area_cuaca)
-    elif masukan == 'bersihkan':
+    elif masukan == "bersihkan":
         segarkan_konsol()
         kode_inti(area_cuaca)
-    elif masukan in ('keluar', 'exit', 'quit'):
+    elif masukan in ("keluar", "exit", "quit"):
         print("Keluar")
         exit(0)
-    elif masukan.isspace() or masukan in '':
+    elif masukan.isspace() or masukan in "":
         pass
     else:
         print(f"Perintah {masukan} tidak valid\n")
-        
+
+
 def daftarkota(area_cuaca):
     segarkan_konsol()
     list_kota = daftar_kota(area_cuaca)
-    print(baca_fail('kepala.txt'))
+    print(baca_fail("kepala.txt"))
     for kota in list_kota:
         print(f"{list_kota.index(kota)+1}. {kota}")
 
     input("Masukan Q untuk keluar: ")
+
 
 def tentang(area_cuaca):
     os.system("cls||clear")
