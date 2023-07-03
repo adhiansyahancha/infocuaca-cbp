@@ -13,9 +13,10 @@ def baca_fail(fail) -> None:
 # Cari kota di data yang sudah disiapkan daftar_kota
 def cari_kota(data_kota, kueri) -> int:
     batas_awal = 0
-    batas_akhir = len(data_kota)
+    batas_akhir = len(data_kota) - 1
     while batas_awal <= batas_akhir:
         mid_index = (batas_awal + batas_akhir) // 2
+        
         if data_kota[mid_index] < kueri:
             batas_awal = mid_index + 1
         elif data_kota[mid_index] > kueri:
