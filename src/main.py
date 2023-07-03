@@ -40,49 +40,45 @@ def urai_perintah(masukan, area_cuaca):
     if masukan[:4] == "cari":
         pola = r'^cari "(.*)"$'
         hasil = re.match(pola, masukan)
-        try:
+        if hasil is not None and hasil.group(1):
             kueri = hasil.group(1)
-        except AttributeError:
-            print("Pencarian tidak valid\n")
         else:
-            try:
-                if kueri:
-                    hasil_pencarian = cari_kota(
-                        urutkan_kota(daftar_kota(area_cuaca)), kueri.title()
-                    )
-                    if hasil_pencarian != -1:
-                        print(f'Kota "{kueri.title()}" ditemukan di pangkalan data\n')
-                    else:
-                        print(f"Hasil pencarian untuk '{kueri}' tidak ditemukan\n")
-                else:
-                    print("Kueri tidak valid")
-            except UnboundLocalError:
-                print("Pencarian tidak Valid\n")
+            print("Kueri tidak valid\n")
+            return 1
+
+        hasil_pencarian = cari_kota(
+            urutkan_kota(daftar_kota(area_cuaca)), kueri.title()
+        )
+        if hasil_pencarian != -1:
+            print(f'Kota "{kueri.title()}" ditemukan di pangkalan data\n')
+        else:
+            print(f"Hasil pencarian untuk \"{kueri}\" tidak ditemukan\n")
 
     elif masukan[:9] == "tampilkan":
         pola = r'^tampilkan "(.*)"$'
         hasil = re.match(pola, masukan)
-        try:
-            kueri = hasil.group(1)
-        except AttributeError:
-            print("Kueri tidak valid\n")
-
-        if kueri.title() == "Pelabuhan Semarang":
-            print(
-                "Informasi cuaca untuk Pelabuhan Semarang tidak tersedia karena beda domain pada data API\n"
-            )
+        if hasil is not None and hasil.group(1):
+            kueri = hasil.group(1).title()
+            kode_kota = konversi_ke_kode(area_cuaca).get(kueri, None)
         else:
-            if kueri:
-                tampilkan(area_cuaca, konversi_ke_kode(area_cuaca)[kueri.title()])
-                kode_inti(area_cuaca)
-            else:
-                print("Kueri tidak valid")
+            print("Kueri tidak valid\n")
+            return 1
+
+        if kueri == "Pelabuhan Semarang":
+            print("Informasi cuaca untuk Pelabuhan Semarang tidak tersedia karena beda domain pada data API\n")
+            return 1
+        
+        if kode_kota is None:
+            print("Kota yang ingin ditampilkan tidak ditemukan di data\n")
+            return 1
+
+        tampilkan(area_cuaca, kode_kota)
+        kode_inti(area_cuaca)
 
     # Pencocokan untuk perintah non-argumen
     elif masukan == "daftar-kota":
         daftarkota(area_cuaca)
         kode_inti(area_cuaca)
-
     elif masukan == "tentang":
         tentang(area_cuaca)
     elif masukan == "bersihkan":
@@ -94,7 +90,7 @@ def urai_perintah(masukan, area_cuaca):
     elif masukan.isspace() or masukan in "":
         pass
     else:
-        print(f"Perintah {masukan} tidak valid\n")
+        print(f"Perintah \"{masukan}\" tidak valid\n")
 
 
 def daftarkota(area_cuaca):
