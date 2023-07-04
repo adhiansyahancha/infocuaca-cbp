@@ -2,7 +2,7 @@ import os
 
 
 # Baca fail dari direktori 'display'
-def baca_fail(fail) -> None:
+def baca_fail(fail) -> str:
     DIR_FAIL = os.path.join(
         os.path.dirname(__file__).replace("src", "") + "display", f"{fail}"
     )
@@ -37,7 +37,7 @@ def daftar_kota(api_cuaca) -> list:
 
 
 # Konversi nama kota ke kode untuk API
-def konversi_ke_kode(data):
+def konversi_ke_kode(data) -> dict:
     konversi = {}
     for kode in range(len(data)):
         konversi[f"{data[kode]['@description']}"] = kode

@@ -1,4 +1,3 @@
-import os
 import re
 import time
 import locale
@@ -104,7 +103,7 @@ def daftarkota(area_cuaca):
 
 
 def tentang(area_cuaca):
-    os.system("cls||clear")
+    segarkan_konsol()
     print("\r" + baca_fail("kepala.txt") + baca_fail("tentang.txt") + "\n")
     input("\rMasukkan [Q] untuk keluar ")
     kode_inti(area_cuaca)
@@ -146,7 +145,7 @@ def tampilkan(area_cuaca, kode):
         "wk": area_cuaca[kode]["parameter"][7]["timerange"][0]["value"][1]["#text"],
         "wd": area_cuaca[kode]["parameter"][7]["timerange"][0]["value"][0]["#text"],
     }
-    os.system("cls||clear")
+    segarkan_konsol()
     print(baca_fail("kepala.txt") + baca_fail("hasil.txt").format(**koleksi_format))
     input("\rMasukkan [Q] untuk keluar ")
 
@@ -158,9 +157,10 @@ if __name__ == "__main__":
 
     try:
         r = respon_data_cuaca().status_code
-    except requests.exceptions.ConnectionError as err:
-        print(f"Gagal menghubungkan API. Berikut ini errornya:\n{err}")
-        input()
+    except requests.exceptions.ConnectionError:
+        while True:
+            print("Gagal menghubungkan API. Tekan [ENTER] untuk mengulangi")
+            input()
 
     respon_json_cuaca = respon_data_cuaca().json()
     area_cuaca = respon_json_cuaca["row"]["data"]["forecast"]["area"]
