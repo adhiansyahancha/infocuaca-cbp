@@ -11,11 +11,13 @@ infocuaca-cbp adalah aplikasi berbasis konsol (*console-based application*, demi
 Cara menjalankan
 ----------------
 Buka direktori ``src`` dan jalankan ``main.py`` sebagai skrip.
-Untuk memasukkan perintah, inputkan di *prompt* ``infocuaca-processor %``
+
+Untuk memasukkan perintah, inputkan di *prompt* ``infocuaca-processor %``.
 
 Tentang aplikasi dan tim
 -----------
 infocuaca-cbp dikembangkan oleh Tim Pengembang infocuaca-cbp sebagai tugas besar Praktikum Pemrograman 1 Semester 2 S1SE-06-B. Anggota tim terdiri dari:
+
 * `Adhiansyah Muhammad Pradana Farawowan <https://github.com/adhiansyahancha>`_ (sebagai Pemimpin Proyek)
 * `Muhammad Ralfi <https://github.com/rafiyamanaka>`_ (sebagai Pemrogram 1 dan *tester*)
 * `Dwi Candra Pratama <https://github.com/DCandraPratama>`_ (sebagai Pemrogram 2)
