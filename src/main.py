@@ -155,14 +155,13 @@ if __name__ == "__main__":
     print(baca_fail("kepala.txt"))
     print("Memuat data...")
 
-    try:
-        r = respon_data_cuaca().status_code
-    except requests.exceptions.ConnectionError:
-        while True:
-            print("Gagal menghubungkan API. Tekan [ENTER] untuk mengulangi")
-            input()
-
-    respon_json_cuaca = respon_data_cuaca().json()
-    area_cuaca = respon_json_cuaca["row"]["data"]["forecast"]["area"]
-
-    kode_inti(area_cuaca=area_cuaca)
+    while True:
+        try:
+            r = respon_data_cuaca().status_code
+            
+            respon_json_cuaca = respon_data_cuaca().json()
+            area_cuaca = respon_json_cuaca["row"]["data"]["forecast"]["area"]
+            kode_inti(area_cuaca=area_cuaca)
+        except requests.exceptions.ConnectionError:
+            input("Gagal menghubungkan API karena koneksi terganggu\nTekan [ENTER] untuk mengulangi ")
+            continue
