@@ -1,3 +1,15 @@
+* commit 2094f5c962ba7d6761996df079808787a3e813e8
+| Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+| Date:   Wed Jul 5 07:42:45 2023 +0700
+| 
+|     Perbaikan nama pengembang
+| 
+* commit c0884c3e6b448072e6fa0916b2f7bd63db5b1533
+| Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
+| Date:   Wed Jul 5 07:35:58 2023 +0700
+| 
+|     README.rst dan main.png
+| 
 * commit 64ff145e2cfb6d4bd53c1204f4dc3ce0d145089a
 | Author: Adhiansyah Ancha <69331906+adhiansyahancha@users.noreply.github.com>
 | Date:   Tue Jul 4 21:09:25 2023 +0700
